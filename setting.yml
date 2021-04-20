@@ -1,0 +1,4 @@
+SLACK_WEBHOOK_URL: ""
+SCHEDULE: rate(1 day)
+PROFILE: default
+REGION: ap-northeast-2
