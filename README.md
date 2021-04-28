@@ -1,3 +1,5 @@
+![ri-watcher-sc](ri-watcher-sc.png)   
+   
 # 0. 목적
 
 AWS RI 리소스들의 Retired 날짜를 잊고 지내다가, 제때 재구매를 하지 못해 Ondemand 비용을 지불하고 사용하는 경우를 방지하기 위해 만들어졌습니다.
