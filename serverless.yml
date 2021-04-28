@@ -1,15 +1,23 @@
 service: ri-watcher
 custom: ${file(./setting.yml)}
 
+
 provider:
   name: aws
   runtime: nodejs14.x
-  profile: ${file(./setting.yml):PROFILE}
-  environment:
-    SLACK_WEBHOOK_URL: ${file(./setting.yml):SLACK_WEBHOOK_URL}
-
   stage: prod
   region: ${file(./setting.yml):REGION}
+  environment:
+    SLACK_WEBHOOK_URL: ${file(./setting.yml):SLACK_WEBHOOK_URL}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+      - 'ec2:Describe*'
+      - 'rds:Describe*'
+      - 'es:Describe*'
+      - 'elasticache:Describe*'
+      - 'redshift:Describe*'
+      Resource: '*'
 
 functions:
   RIWatcher:

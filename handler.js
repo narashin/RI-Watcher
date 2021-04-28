@@ -2,7 +2,6 @@
 
 
 module.exports.RIWatcher = (event, callback) => {
-
   const AWS = require('aws-sdk');
   const moment = require('moment');
   const {
@@ -165,6 +164,7 @@ module.exports.RIWatcher = (event, callback) => {
         slackMessage.blocks.push(i);
       }
     }
+    
 
     let slackMessage = {
       "blocks": [{
@@ -200,16 +200,11 @@ module.exports.RIWatcher = (event, callback) => {
     injectMessage(ES);
     injectMessage(REDSHIFT);
 
+    
+
     slackMessage.blocks.push(
       {
         "type": "divider"
-      },
-      {
-        "type": "context",
-        "elements": [{
-          "type": "mrkdwn",
-          "text": ":pushpin: 테스트*."
-        }]
       }
     );
     return slackMessage;

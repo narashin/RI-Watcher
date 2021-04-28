@@ -1,4 +1,4 @@
-SLACK_WEBHOOK_URL: ""
-SCHEDULE: rate(1 day)
-PROFILE: default
-REGION: ap-northeast-2
+SLACK_WEBHOOK_URL: ""# SLACK WEBHOOK URL
+SCHEDULE: cron(0 1 * * ? *) # cron() or rate() 
+PROFILE: default # AWS Profile in your local
+REGION: ap-northeast-2 # Target region

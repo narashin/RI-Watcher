@@ -1,0 +1,23 @@
+{
+  "name": "ri-watcher",
+  "version": "1.0.0",
+  "description": "AWS RI Expired Date Watcher",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narashin/RI-Watcher.git"
+  },
+  "author": "narashin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narashin/RI-Watcher/issues"
+  },
+  "homepage": "https://github.com/narashin/RI-Watcher#readme",
+  "dependencies": {
+    "@slack/webhook": "^6.0.0",
+    "moment": "^2.29.1"
+  }
+}
